@@ -738,3 +738,35 @@ h3 {
     width: 100%;
   }
 }
+
+/* Impressum und Datenschutz */
+.rechtstext h1 {
+  font-size: 32px;
+}
+
+.rechtstext h2 {
+  font-size: 20px;
+  margin: 36px 0 10px;
+}
+
+.rechtstext ul {
+  margin: 12px 0 0 22px;
+}
+
+.rechtstext li + li {
+  margin-top: 8px;
+}
+
+.rechtstext .abstand-oben {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.rechtstext a {
+  color: var(--weinrot);
+}
+
+.rechtstext ul + p {
+  margin-top: 16px;
+}
