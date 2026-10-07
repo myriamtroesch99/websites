@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hogwarts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="img/Hogwarts_Flagge.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="lessons">
+    <!-- header-->
+    <header id="header">
+      <a href="#" class="logo"
+        ><img
+          src="img/Hogwarts_Flagge.png"
+          alt="Hogwarts Flagge"
+          height="50px"
+          class="nav-hover"
+      /></a>
+      <nav>
+        <li>
+          <a href="home.html" onclick="toggle()" class="nav-hover">Home</a>
+        </li>
+        <li class="houses-dropdown">
+          <a href="houses.html" onclick="toggle()" class="hover-houses"
+            >Houses</a
+          >
+          <div class="houses-dropdown-content">
+            <a href="gryffindor.html" onclick="toggle()" class="nav-hover"
+              >Gryffindor</a
+            >
+            <a href="hufflepuff.html" onclick="toggle()" class="nav-hover"
+              >Hufflepuff</a
+            >
+            <a href="ravenclaw.html" onclick="toggle()" class="nav-hover"
+              >Ravenclaw</a
+            >
+            <a href="slytherin.html" onclick="toggle()" class="nav-hover"
+              >Slytherin</a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="lessons.html" onclick="toggle()" class="nav-hover"
+            >Lessons</a
+          >
+        </li>
+        <li>
+          <a href="facts.html" onclick="toggle()" class="nav-hover">Facts</a>
+        </li>
+        <li>
+          <a href="gallery.html" onclick="toggle()" class="nav-hover"
+            >Gallery</a
+          >
+        </li>
+      </nav>
+      <div class="toggle" onclick="toggle()"></div>
+    </header>
+
+    <!-- banner-->
+    <section class="banner">
+      <h1>Lessons</h1>
+    </section>
+    <!-- haeuser-->
+    <section class="about">
+      <div class="about-box">
+        <p>
+          Hogwarts School of Witchcraft and Wizardry offers a variety of
+          subjects, including both core curriculum and electives available from
+          the third year onward.
+        </p>
+
+        <p>
+          At the end of their fifth year, students take the Ordinary Wizarding
+          Level (O.W.L.) exams to determine if they can handle the more advanced
+          curriculum in the last two years. In their seventh year, students take
+          the Nastily Exhausting Wizarding Test (N.E.W.T.), which is crucial for
+          future career prospects.
+        </p>
+
+        <p>
+          Some core classes can be dropped in the sixth year, allowing students
+          to focus on subjects relevant to their career goals. Specialized
+          classes like Alchemy are available in the sixth year if there is
+          enough interest.
+        </p>
+      </div>
+    </section>
+    <!-- unterricht-->
+    <section>
+      <h2>Classes</h2>
+      <div class="listing-left">
+        <div class="classes">
+          <div class="box">
+            <h3>Core Classes</h3>
+
+            <h4 class="dropdown-classes">Astronomy</h4>
+            <p class="dropdown-content-classes">
+              Astronomy involves observing the night skies with telescopes and
+              understanding various phenomena in space, such as lunar phases and
+              space weather. Assignments include learning the names of stars,
+              constellations, and planets, and charting their locations,
+              movements, and environments. The relevance of this subject to the
+              education of witches and wizards is not entirely clear, but there
+              is much to be learned from the stars. It is the only field of
+              study at Hogwarts with a direct equivalent in the Muggle world.
+              Astronomy classes take place in the highest level of the Astronomy
+              Tower, the tallest tower in Hogwarts. Required equipment includes
+              a telescope.
+            </p>
+
+            <h4 class="dropdown-classes">Charms</h4>
+            <p class="dropdown-content-classes">
+              Charms consist of a wide range of spells that give targets
+              (objects or individuals) new and unexpected properties or make
+              them perform certain actions. Charms can be some of the most
+              powerful and game-changing spells. Successfully casting a charm
+              requires concentration, precise wand movements, and proper
+              pronunciation of the spell’s incantation. Charms classes are known
+              for being noisy and chaotic, as they are largely practical. Charms
+              classes take place in Classroom 2E along the Charms corridor on
+              the third floor. Required equipment includes a wand and textbooks
+              such as The Standard Book of Spells series and Quintessence: A
+              Quest.
+            </p>
+
+            <h4 class="dropdown-classes">Defence Against the Dark Arts</h4>
+            <p class="dropdown-content-classes">
+              Defence Against the Dark Arts, commonly shortened to D.A.D.A.,
+              teaches students how to protect themselves against the Dark Arts,
+              use offensive and protective spells, and handle dark creatures.
+              Practical lessons are essential to truly learn the subject;
+              theoretical lessons alone are insufficient. The subject has a high
+              turnover of staff members, with no Defence Against the Dark Arts
+              teacher remaining for more than one school year during Harry
+              Potter’s time at Hogwarts. Defence Against the Dark Arts classes
+              take place in Classroom 3C on the third floor. Required equipment
+              includes a wand and textbooks such as The Dark Forces: A Guide to
+              Self-Protection, Break with a Banshee, Gadding with Ghouls,
+              Holidays with Hags, Travels with Trolls, Voyages with Vampires,
+              Wanderings with Werewolves, Year with the Yeti, The Essential
+              Defence Against the Dark Arts, Dark Arts Defence – Basics for
+              Beginners, Defence Against the Dark Arts, Advanced Defence Against
+              the Dark Arts, Defensive Magical Theory, and Confronting the
+              Faceless.
+            </p>
+
+            <h4 class="dropdown-classes">Herbology</h4>
+            <p class="dropdown-content-classes">
+              Herbology is the study of magical plants and fungi. Students learn
+              how to care for and utilize different plants, their magical
+              properties, and their uses. They are also taught spells helpful
+              for gardening, such as the Herbivicus Charm. As students progress
+              through their education, the plants become more difficult and
+              dangerous. Herbology classes take place in various greenhouses
+              located behind the castle. Required equipment includes a wand,
+              Dragon-hide gloves, Dragon dung fertilizer, earmuffs, and a
+              watering can. Required textbooks include One Thousand Magical
+              Herbs and Fungi, Winogrand's Wondrous Water Plants, and
+              Flesh-Eating Trees of the World.
+            </p>
+
+            <h4 class="dropdown-classes">History of Magic</h4>
+            <p class="dropdown-content-classes">
+              History of Magic involves studying the history of the wizarding
+              world through lectures on significant names, dates, and events.
+              Topics include the Goblin Rebellions, the Witch-hunts, the Giant
+              Wars, and the origin of the International Statute of Wizarding
+              Secrecy. The class is considered very boring due to the monotonous
+              nature of the lectures. History classes take place in Classroom 4F
+              on the first floor. The required textbook is A History of Magic.
+            </p>
+
+            <h4 class="dropdown-classes">Potions</h4>
+            <p class="dropdown-content-classes">
+              Potions is the exact art and subtle science of creating various
+              liquid mixtures with magical effects. It requires adding the
+              correct ingredients to the cauldron and stirring at the right
+              times and temperatures. Students study different ingredients and
+              their properties. Potions is considered difficult to achieve an
+              O.W.L. in, with only twelve students from Harry Potter’s year
+              succeeding. The O.W.L. written exam is described as "difficult".
+              Potions classes take place in Hogwarts Dungeons. Required
+              equipment includes a wand, a cauldron, a set of brass scales, a
+              set of phials (glass or crystal), and textbooks such as Magical
+              Drafts and Potions, One Thousand Magical Herbs and Fungi, Advanced
+              Potion-Making, and A Collection of Above Three Hundred Receipts in
+              Cookery, Physick, and Surgery.
+            </p>
+
+            <h4 class="dropdown-classes">Transfiguration</h4>
+            <p class="dropdown-content-classes">
+              Transfiguration is a challenging theory-based subject focused on
+              changing the form or appearance of objects, including turning
+              inanimate objects into living creatures and vice versa. It also
+              involves conjuring things out of thin air, making things vanish,
+              and switching objects' places. Human Transfiguration is considered
+              the most difficult branch. Transfiguration is described as "some
+              of the most dangerous magic you will be taught at Hogwarts".
+              Classes take place in Classroom 1B on the ground floor, around the
+              Middle Courtyard. Required equipment includes a wand and textbooks
+              such as A Beginner's Guide to Transfiguration, Intermediate
+              Transfiguration, and A Guide to Advanced Transfiguration.
+            </p>
+          </div>
+
+          <div class="box">
+            <h3>Electives</h3>
+            <p class="center"><i>Third years and up:</i></p>
+            <h4 class="dropdown-classes">Arithmancy</h4>
+            <p class="dropdown-content-classes">
+              Arithmancy is concerned with the magical properties of numbers. It
+              is reportedly difficult due to the need to memorize or work with
+              many charts. Arithmancy classes take place in Classroom 7A on the
+              seventh floor. Required textbooks include Numerology and
+              Grammatica.
+            </p>
+
+            <h4 class="dropdown-classes">Care of Magical Creatures</h4>
+            <p class="dropdown-content-classes">
+              Care of Magical Creatures, also known as Creature Care, instructs
+              students about various magical beasts, their behavior, and how to
+              properly identify, approach, feed, groom, mount, ride, and breed
+              them. Classes take place outside the castle. Required textbooks
+              include The Monster Book of Monsters and Fantastic Beasts and
+              Where to Find Them.
+            </p>
+
+            <h4 class="dropdown-classes">Divination</h4>
+            <p class="dropdown-content-classes">
+              Divination is the art of predicting the future using various
+              methods, such as tea leaves, fire-omens, crystal balls, palmistry,
+              cartomancy, astrology, and dream interpretation. It requires
+              natural aptitude, as one cannot simply study hard to improve if
+              they lack this innate gift. Divination is described as "one of the
+              most imprecise branches of magic". Classes take place in a
+              classroom accessible through a circular trapdoor in the North
+              Tower. Required textbooks include The Dream Oracle and Unfogging
+              the Future.
+            </p>
+
+            <h4 class="dropdown-classes">Study of Ancient Runes</h4>
+            <p class="dropdown-content-classes">
+              Study of Ancient Runes involves the study and translation of
+              ancient runic scripts. Classes take place in Classroom 6A on the
+              sixth floor. Required textbooks include Advanced Rune Translation,
+              Ancient Runes Made Easy, Magical Hieroglyphs and Logograms, Rune
+              Dictionary, and Spellman's Syllabary.
+            </p>
+            <br />
+
+            <p class="center"><i>Sixth and Seventh year:</i></p>
+            <h4 class="dropdown-classes">Advanced Arithmancy Studies</h4>
+            <p class="dropdown-content-classes">
+              Advanced Arithmancy Studies is Arithmancy for students with
+              particular skill in the subject. It is taught in a classroom in
+              the Hogwarts Turris Magnus.
+            </p>
+
+            <h4 class="dropdown-classes">Alchemy</h4>
+            <p class="dropdown-content-classes">
+              Alchemy is a composite subject that focuses on the study of the
+              composition, structure, and magical properties of the four basic
+              elements (fire, earth, air, and water) and the transmutation of
+              substances. The main ambitions of Alchemy include transmuting base
+              metals into gold, discovering a universal solvent, and creating a
+              panacea. A less known branch is Spagyric, or "plant alchemy,"
+              which produces herbal medicines. The subject is considered one of
+              the most difficult forms of magic and is only offered to N.E.W.T.
+              level students if there is sufficient demand.
+            </p>
+
+            <h4 class="dropdown-classes">Apparition</h4>
+            <p class="dropdown-content-classes">
+              Apparition is the magical form of teleportation that allows
+              instant travel between locations. It is a twelve-week course
+              starting after the Christmas holidays and is optional for students
+              who are seventeen or will turn seventeen before the next school
+              year. The course costs 12 Galleons. Performing Apparition requires
+              a license and can only be legally done by those over seventeen due
+              to the risk of splinching. Apparition is practiced in the Great
+              Hall with temporary relaxations of magical enchantments. Wilkie
+              Twycross, a Ministry of Magic Apparition Instructor, offers
+              lessons to sixth-years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="listing-left">
+        <div class="classes">
+          <div class="box">
+            <h3>Extra-curricular subjects</h3>
+
+            <h4 class="dropdown-classes">Ancient Studies</h4>
+            <p class="dropdown-content-classes">
+              Ancient Studies is an extra-curricular subject at Hogwarts.
+            </p>
+
+            <h4 class="dropdown-classes">Art</h4>
+            <p class="dropdown-content-classes">
+              Art is an extra-curricular subject available to third-year
+              students and above. It is taught in a classroom on the fifth floor
+              and covers art of the Wizarding world.
+            </p>
+
+            <h4 class="dropdown-classes">Field Studies</h4>
+            <p class="dropdown-content-classes">
+              Field Studies is a course introduced in the 2010s, proposed by
+              Archibald Eagleton. It involves studying magical creatures in
+              nature.
+            </p>
+
+            <h4 class="dropdown-classes">Ghoul Studies</h4>
+            <p class="dropdown-content-classes">
+              Ghoul Studies is an extra-curricular class taught in a classroom
+              in the Serpentine Corridor, located in the Hogwarts Turris Magnus.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Other Classes</h3>
+
+            <h4 class="dropdown-classes">Flying</h4>
+            <p class="dropdown-content-classes">
+              Flying, or Broom Flight Class, teaches students how to fly on
+              magic broomsticks. It includes learning to handle a broom, perform
+              techniques and maneuvers, and care for the broom. Flying class is
+              mandatory for first years and optional for second years and above.
+              It takes place outside in and above the Castle Courtyard. Required
+              equipment includes a broomstick, which is provided for first-year
+              students.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- nicetoknows-->
+
+    <footer>
+      <div class="social">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/harrypotter" target="_blank">
+              <img src="img/Facebook.png" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/harrypotter/" target="_blank">
+              <img src="img/Instagram.png" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@harrypotter" target="_blank">
+              <img src="img/Tiktok.png" alt="TikTok" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UChPRO1CB_Hvd0TvKRU62iSQ"
+              target="_blank"
+            >
+              <img src="img/Youtube.png" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="copyright">
+        Design by
+        <a class="no-underline" href="https://www.bbz-biel.ch" target="_blank"
+          >BBZ Biel Myriam Trösch</a
+        >
+      </p>
+    </footer>
+    <!-- Einfügen am Schluss vor das Tag </body>-->
+    <!-- Das Script ist auf Moodle.. -->
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggle() {
+        var header = document.querySelector("header");
+        document.querySelector("header");
+        header.classList.toggle("active");
+      }
+    </script>
+    <script>
+      const dropdownToggles = document.querySelectorAll(".dropdown-classes");
+
+      dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", function () {
+          const content = this.nextElementSibling;
+
+          if (content.style.display === "block") {
+            content.style.display = "none";
+            this.classList.remove("active");
+          } else {
+            content.style.display = "block";
+            this.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

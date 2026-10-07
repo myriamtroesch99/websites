@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hogwarts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="img/Hogwarts_Flagge.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="hufflepuff">
+    <!-- header-->
+    <header id="header">
+      <a href="#" class="logo"
+        ><img
+          src="img/Hogwarts_Flagge.png"
+          alt="Hogwarts Flagge"
+          height="50px"
+          class="nav-hover"
+      /></a>
+      <nav>
+        <li>
+          <a href="home.html" onclick="toggle()" class="nav-hover">Home</a>
+        </li>
+        <li class="houses-dropdown">
+          <a href="houses.html" onclick="toggle()" class="hover-houses"
+            >Houses</a
+          >
+          <div class="houses-dropdown-content">
+            <a href="gryffindor.html" onclick="toggle()" class="nav-hover"
+              >Gryffindor</a
+            >
+            <a href="hufflepuff.html" onclick="toggle()" class="nav-hover"
+              >Hufflepuff</a
+            >
+            <a href="ravenclaw.html" onclick="toggle()" class="nav-hover"
+              >Ravenclaw</a
+            >
+            <a href="slytherin.html" onclick="toggle()" class="nav-hover"
+              >Slytherin</a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="lessons.html" onclick="toggle()" class="nav-hover"
+            >Lessons</a
+          >
+        </li>
+        <li>
+          <a href="facts.html" onclick="toggle()" class="nav-hover">Facts</a>
+        </li>
+        <li>
+          <a href="gallery.html" onclick="toggle()" class="nav-hover"
+            >Gallery</a
+          >
+        </li>
+      </nav>
+      <div class="toggle" onclick="toggle()"></div>
+    </header>
+
+    <!-- banner-->
+    <section class="banner">
+      <h1>
+        Hufflepuff<br />
+        <p>hard work, patience, justice, and loyalty</p>
+      </h1>
+    </section>
+    <section class="about">
+      <div class="about-box">
+        <p class="zitat">
+          "You might belong in Hufflepuff, Where they are just and loyal, Those
+          patient Hufflepuffs are true, And unafraid of toil."
+        </p>
+        <p>— Sorting Hat</p>
+      </div>
+    </section>
+    <!-- haeuser-->
+    <section class="about">
+      <div class="about-box">
+        <h2>About</h2>
+        <p>
+          Hufflepuff is one of the four Houses of Hogwarts School of Witchcraft
+          and Wizardry. Its founder is the medieval witch Helga Hufflepuff.
+          Hufflepuff is the most inclusive among the four houses, valuing hard
+          work, dedication, patience, loyalty, and fair play rather than a
+          particular aptitude in its members.
+        </p>
+        <p>
+          The emblematic animal is a badger, and yellow and black are its house
+          colors. The Fat Friar is the House's patron ghost.
+        </p>
+        <p>
+          Hufflepuff corresponds roughly to the element of earth, and it is for
+          that reason that the House colors are chosen: yellow represents golden
+          wheat, while black symbolizes fertile soil. The Hufflepuff points
+          hourglass contains yellow diamonds. Students sorted into Hufflepuff
+          often demonstrate strong abilities in Herbology, owing to their
+          connection to earth.
+        </p>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about-box">
+        <img
+          src="img/Helga-Hufflepuff.jpg"
+          alt="Helga-Hufflepuff"
+          height="200px"
+        />
+        <h2>Helga Hufflepuff</h2>
+        <p>
+          Helga Hufflepuff (early 993) was a Welsh witch and was one of the four
+          founders of Hogwarts School of Witchcraft and Wizardry. While the
+          other founders chose to have special students, she accepted them all
+          without preference, although she did want them to be loyal and
+          hard-working. Helga's portrait remained at Hogwarts by at least the
+          1980s.
+        </p>
+      </div>
+    </section>
+    <section class="fellow-section">
+      <div class="fellow-box">
+        <h2>Fellow Hufflepuffs</h2>
+        <div class="fellow">
+          <div class="fellow-item">
+            <img class="fellow-image" src="img/Diggory.png" />
+            <h4>Cedric Diggory</h4>
+          </div>
+          <div class="fellow-item">
+            <img class="fellow-image" src="img/scamander.png" />
+            <h4>Newt Scamander</h4>
+          </div>
+          <div class="fellow-item">
+            <img class="fellow-image" src="img/Tonks.png" />
+            <h4>Nymphadora Tonks</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/harrypotter" target="_blank">
+              <img src="img/Facebook.png" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/harrypotter/" target="_blank">
+              <img src="img/Instagram.png" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@harrypotter" target="_blank">
+              <img src="img/Tiktok.png" alt="TikTok" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UChPRO1CB_Hvd0TvKRU62iSQ"
+              target="_blank"
+            >
+              <img src="img/Youtube.png" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="copyright">
+        Design by
+        <a class="no-underline" href="https://www.bbz-biel.ch" target="_blank"
+          >BBZ Biel Myriam Trösch</a
+        >
+      </p>
+    </footer>
+    <!-- Einfügen am Schluss vor das Tag </body>-->
+    <!-- Das Script ist auf Moodle.. -->
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggle() {
+        var header = document.querySelector("header");
+        document.querySelector("header");
+        header.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
