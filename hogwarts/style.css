@@ -692,3 +692,17 @@ footer {
     font-size: 20px;
   }
 }
+/* Link zu Impressum und Datenschutz (myis.ch) */
+.rechtliches {
+  text-align: center;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+.rechtliches a {
+  color: rgb(170, 170, 170);
+  text-decoration: none;
+}
+.rechtliches a:hover {
+  color: white;
+  text-decoration: underline;
+}
