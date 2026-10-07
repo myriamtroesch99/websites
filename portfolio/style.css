@@ -540,6 +540,11 @@ h3 {
   border-bottom: none;
 }
 
+/* kein doppelter Abstand zwischen Abschnittstitel und erstem Projekt (B) */
+.projekt:first-child {
+  padding-top: 0;
+}
+
 .projekt h3 {
   font-size: 18px;
   margin-bottom: 20px;
@@ -614,14 +619,22 @@ h3 {
     display: none;
   }
 
-  /* weniger Abstand zwischen Titel und erstem Text */
-  .hero-geteilt + .bereich,
-  .hero-geteilt + div + .bereich-titel {
-    padding-top: 16px;
+  /* Abstand unter dem Titelbereich (A) */
+  .hero-geteilt .hero-text {
+    padding-bottom: 50px;
   }
 
-  .hero-geteilt .hero-text {
+  .hero-geteilt + div + .bereich-titel {
+    padding-top: 50px;
+  }
+
+  /* Über mi: Titel und Text gehören zusammen, darum wenig Abstand */
+  .hero-zentriert .hero-text {
     padding-bottom: 0;
+  }
+
+  .hero-zentriert + .bereich {
+    padding-top: 16px;
   }
 
   .hero-geteilt h1 {
