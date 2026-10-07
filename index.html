@@ -111,11 +111,13 @@
     .karte-text {
       flex: 1;
       padding: 24px;
-      border-top: 4px solid var(--weinrot);
+      border-top: 4px solid var(--mauve);
+      transition: border-color 0.3s;
     }
 
-    .karte:nth-child(2) .karte-text { border-top-color: var(--mauve); }
-    .karte:nth-child(3) .karte-text { border-top-color: var(--weiss); }
+    .karte:hover .karte-text {
+      border-top-color: var(--weinrot);
+    }
 
     .karte h2 {
       font-size: 22px;
@@ -183,7 +185,6 @@
         <div class="karte-text">
           <h2>Portfolio</h2>
           <p>Über mi u e chline Iblick i mini Arbeite</p>
-          <span class="pfeil">Aaluege &rarr;</span>
         </div>
       </a>
 
@@ -194,7 +195,6 @@
         <div class="karte-text">
           <h2>Hogwarts Schulwebsite</h2>
           <p>Schuuprojekt mit HTML u CSS</p>
-          <span class="pfeil">Aaluege &rarr;</span>
         </div>
       </a>
 
@@ -205,7 +205,6 @@
         <div class="karte-text">
           <h2>Galaxy Game</h2>
           <p>Game mit JavaScript, HTML u CSS (nur Desktop)</p>
-          <span class="pfeil">Spile &rarr;</span>
         </div>
       </a>
     </div>
