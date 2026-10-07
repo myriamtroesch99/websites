@@ -462,9 +462,34 @@ h3 {
 }
 
 .favoriten {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin-top: 40px;
+}
+
+/* Kachel, die auf eine Website verlinkt (z. B. Hogwarts) */
+.galerie-link {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  color: var(--weiss);
+  text-decoration: none;
+}
+
+.galerie-link span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.65);
+  font-family: var(--titel-schrift);
+  font-size: 14px;
+}
+
+.galerie-link:hover img {
+  transform: scale(1.05);
 }
 
 /* Lightbox (Bild gross anzeigen) */
@@ -562,6 +587,49 @@ h3 {
 }
 
 /* =========================================
+   Tablet und Handy: Bild oben, Titel darunter
+   ========================================= */
+
+@media (max-width: 1200px) {
+  .hero-geteilt {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 0;
+  }
+
+  .hero-geteilt img {
+    order: -1;
+    height: auto;
+    max-height: 85vh;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-geteilt .hero-text {
+    max-width: none;
+    padding: 40px 20px 0;
+  }
+
+  .hero-geteilt .pfeil-runter {
+    display: none;
+  }
+
+  /* weniger Abstand zwischen Titel und erstem Text */
+  .hero-geteilt + .bereich,
+  .hero-geteilt + div + .bereich-titel {
+    padding-top: 16px;
+  }
+
+  .hero-geteilt .hero-text {
+    padding-bottom: 0;
+  }
+
+  .hero-geteilt h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================================
    Handy und Tablet
    ========================================= */
 
@@ -620,28 +688,7 @@ h3 {
     font-size: 44px;
   }
 
-  .hero-geteilt {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    min-height: 0;
-  }
 
-  /* Auf dem Handy: Bild zuerst, Titel darunter, Bild ganz zeigen */
-  .hero-geteilt img {
-    order: -1;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .hero-geteilt .hero-text {
-    padding: 40px 20px 50px;
-  }
-
-  .hero-geteilt .pfeil-runter {
-    display: none;
-  }
 
   .bereich {
     padding: 60px 16px;
@@ -665,6 +712,7 @@ h3 {
   }
 
   .favoriten {
+    grid-template-columns: repeat(2, 1fr);
     gap: 11px;
   }
 }
@@ -679,7 +727,5 @@ h3 {
     top: 130px;
   }
 
-  .favoriten {
-    grid-template-columns: 1fr;
-  }
+
 }
