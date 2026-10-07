@@ -729,3 +729,12 @@ h3 {
 
 
 }
+
+/* Über mi: Titel zentriert, aber nur wenn er unter dem Bild steht (Tablet und Handy) */
+@media (max-width: 1200px) {
+  .hero-zentriert .hero-text {
+    text-align: center;
+    justify-self: center;
+    width: 100%;
+  }
+}
