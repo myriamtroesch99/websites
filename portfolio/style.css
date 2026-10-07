@@ -1,0 +1,643 @@
+/* =========================================
+   Myis Portfolio
+   Farben und Schriften wie auf der Jimdo-Seite
+   ========================================= */
+
+:root {
+  --schwarz: #000000;
+  --weinrot: #570d1f;
+  --mauve: #93878b;
+  --weiss: #ffffff;
+  --text-dunkel: #323335;
+  --header-hoehe: 72px;
+  --titel-schrift: "Montserrat", Arial, sans-serif;
+  --text-schrift: "Hedvig Letters Serif", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--text-schrift);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dunkel);
+  background: var(--schwarz);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--titel-schrift);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-hoehe);
+  background: var(--schwarz);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav > ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+.nav li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  display: block;
+  padding: 20px;
+  color: var(--weiss);
+  text-decoration: none;
+}
+
+.nav a span {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.nav a:hover span,
+.nav a.aktiv span {
+  border-bottom-color: var(--weiss);
+}
+
+/* Untermenü (Web-Projekt) */
+.hat-untermenue > a span::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--weiss);
+  vertical-align: middle;
+}
+
+.untermenue {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  list-style: none;
+  background: var(--schwarz);
+  padding: 8px 0;
+}
+
+.hat-untermenue:hover .untermenue,
+.hat-untermenue:focus-within .untermenue {
+  display: block;
+}
+
+.logo {
+  color: var(--weiss);
+  text-decoration: none;
+}
+
+/* Hamburger-Button (nur Handy) */
+.menue-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menue-button span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px 0;
+  background: var(--weiss);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ---------- Hero (Startseite) ---------- */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-hoehe));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--weiss);
+  background: var(--schwarz);
+  overflow: hidden;
+}
+
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 24px;
+}
+
+/* ---------- Hero geteilt (Unterseiten) ---------- */
+
+.hero-geteilt {
+  min-height: calc(100vh - var(--header-hoehe));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--schwarz);
+  color: var(--weiss);
+  position: relative;
+}
+
+.hero-geteilt .hero-text {
+  align-self: center;
+  padding: 0 60px;
+  max-width: 632px;
+}
+
+.hero-geteilt h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.hero-geteilt h2 {
+  font-size: 24px;
+}
+
+.hero-geteilt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pfeil nach unten */
+.pfeil-runter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  animation: huepfen 2s infinite;
+}
+
+.hero-geteilt .pfeil-runter {
+  left: 60px;
+  transform: none;
+}
+
+.pfeil-runter::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid var(--weiss);
+  border-bottom: 2px solid var(--weiss);
+  transform: rotate(45deg);
+}
+
+@keyframes huepfen {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 8px; }
+}
+
+/* ---------- Inhaltsbereiche ---------- */
+
+.bereich {
+  padding: 80px 20px;
+}
+
+.bereich-weiss { background: var(--weiss); color: var(--text-dunkel); }
+.bereich-schwarz { background: var(--schwarz); color: var(--weiss); }
+.bereich-weinrot { background: var(--weinrot); color: var(--weiss); }
+.bereich-mauve { background: var(--mauve); color: var(--weiss); }
+
+.bereich-weiss h1,
+.bereich-weiss h2 {
+  color: var(--weinrot);
+}
+
+.inhalt {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.inhalt-breit {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.zentriert {
+  text-align: center;
+}
+
+.bereich h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.bereich h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.bereich p + p {
+  margin-top: 16px;
+}
+
+.bild-zentriert {
+  margin: 40px auto 0;
+}
+
+/* ---------- Karussell (Hobbys usw.) ---------- */
+
+.karussell {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.karussell-fenster {
+  overflow: hidden;
+}
+
+.karussell-band {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.folie {
+  flex: 0 0 100%;
+  padding: 0 60px;
+}
+
+.folie img {
+  height: 520px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto 30px;
+}
+
+.folie strong {
+  display: block;
+  font-weight: 600;
+}
+
+.karussell-pfeil {
+  position: absolute;
+  top: 260px;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.karussell-pfeil::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+}
+
+.karussell-pfeil.zurueck { left: 0; color: inherit; }
+.karussell-pfeil.zurueck::before { left: 16px; transform: rotate(-45deg); }
+.karussell-pfeil.weiter { right: 0; color: inherit; }
+.karussell-pfeil.weiter::before { right: 16px; transform: rotate(135deg); }
+
+.bereich-weiss .karussell-pfeil { color: var(--text-dunkel); }
+.bereich-weinrot .karussell-pfeil,
+.bereich-mauve .karussell-pfeil { color: var(--weiss); }
+
+.punkte {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.punkte button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.punkte button.aktiv {
+  opacity: 1;
+}
+
+/* ---------- Bildergalerie (Portfolio) ---------- */
+
+.bereich-titel {
+  padding: 80px 20px 40px;
+}
+
+.bereich-titel + .bereich {
+  padding-top: 0;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.galerie button {
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  background: none;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.galerie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.galerie button:hover img {
+  transform: scale(1.05);
+}
+
+.favoriten {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Lightbox (Bild gross anzeigen) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  padding: 40px;
+}
+
+.lightbox.offen {
+  display: flex;
+}
+
+.lightbox img {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+.lightbox button {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--weiss);
+  font-size: 40px;
+  cursor: pointer;
+  padding: 10px 20px;
+  line-height: 1;
+}
+
+.lightbox .schliessen { top: 10px; right: 10px; }
+.lightbox .zurueck { left: 10px; top: 50%; transform: translateY(-50%); }
+.lightbox .weiter { right: 10px; top: 50%; transform: translateY(-50%); }
+
+/* ---------- Web-Projekte ---------- */
+
+.projekt {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.projekt:last-child {
+  border-bottom: none;
+}
+
+.projekt h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.projekt h3 a {
+  text-decoration: none;
+}
+
+.projekt h3 a:hover {
+  text-decoration: underline;
+}
+
+.projekt h3 small {
+  font-size: 18px;
+}
+
+.projekt img {
+  margin-top: 30px;
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+.projekt a:hover img {
+  opacity: 0.85;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--schwarz);
+  color: var(--weiss);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.footer a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   Handy und Tablet
+   ========================================= */
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .menue-button {
+    display: block;
+    order: 2;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    top: var(--header-hoehe);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    background: var(--schwarz);
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .menue-offen .nav {
+    display: block;
+  }
+
+  .nav > ul {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav li {
+    display: block;
+  }
+
+  .untermenue {
+    display: block;
+    position: static;
+    padding: 0 0 0 20px;
+  }
+
+  .hat-untermenue > a span::after {
+    display: none;
+  }
+
+  .menue-offen .menue-button span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menue-offen .menue-button span:nth-child(2) { opacity: 0; }
+  .menue-offen .menue-button span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .hero h1,
+  .hero-geteilt h1 {
+    font-size: 44px;
+  }
+
+  .hero-geteilt {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50vh;
+  }
+
+  .hero-geteilt .hero-text {
+    padding: 60px 20px;
+  }
+
+  .hero-geteilt .pfeil-runter {
+    display: none;
+  }
+
+  .bereich {
+    padding: 60px 16px;
+  }
+
+  .folie {
+    padding: 0 40px;
+  }
+
+  .folie img {
+    height: 340px;
+  }
+
+  .karussell-pfeil {
+    top: 170px;
+  }
+
+  .galerie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .favoriten {
+    gap: 11px;
+  }
+}
+
+@media (max-width: 500px) {
+  .folie img {
+    height: 260px;
+  }
+
+  .karussell-pfeil {
+    top: 130px;
+  }
+
+  .favoriten {
+    grid-template-columns: 1fr;
+  }
+}
