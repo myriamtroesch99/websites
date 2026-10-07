@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein game</title>
+    <link rel="stylesheet" href="gameover.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio
+      id="sound"
+      src="..//assets/sounds/T Bless - Froggy Fraud Adventure.mp3"
+    ></audio>
+    <div id="wrapper">
+      <div id="playground">
+        <h1 id="titel">Game Over!</h1>
+
+        <a id="start" href="../game/game.html"
+          ><div class="button">Neustart</div></a
+        >
+        <div id="highscore">Highscore: 0</div>
+        <div id="score">Your score: 0</div>
+        <img id="player" src="../assets/images/Player.gif" />
+      </div>
+    </div>
+    <script src="https://bbz-biel-informatik.github.io/288-javascript/game-framework/bbzgame.js"></script>
+    <script type="module" src="gameover.js"></script>
+    <a href="../../impressum/index.html" style="position: fixed; right: 16px; bottom: 12px; z-index: 10; color: rgba(255, 255, 255, 0.65); font-size: 14px; text-decoration: none;">Impressum &amp; Datenschutz</a>
+  </body>
+</html>
