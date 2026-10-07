@@ -127,8 +127,15 @@ h3 {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   color: var(--weiss);
   text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 /* Hamburger-Button (nur Handy) */
