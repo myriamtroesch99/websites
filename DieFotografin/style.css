@@ -1,0 +1,503 @@
+:root {
+  --dunkelblau: #004aae;
+  --hellblau: #aecaea;
+  --schwarz: #000;
+  --weiss: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12pt;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--weiss);
+  color: var(--schwarz);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 50pt;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 30pt;
+  margin: 15px 0 10px;
+}
+
+.hervorhebung {
+  font-weight: 700;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  background: var(--schwarz);
+  z-index: 1000;
+  transition: 0.6s ease-in-out;
+}
+
+header.sticky {
+  padding: 5px 100px;
+}
+
+.logo {
+  display: block;
+  background: var(--weiss);
+  padding: 15px 25px;
+  border-radius: 15px;
+  transition:
+    transform 0.4s ease,
+    padding 0.6s ease-in-out;
+}
+
+header.sticky .logo {
+  padding: 6px 12px;
+}
+
+.logo img {
+  display: block;
+  height: 130px;
+  transition: height 0.6s ease-in-out;
+}
+
+header.sticky .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav li a {
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px;
+  color: var(--weiss);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+header.sticky nav li a {
+  font-weight: 400;
+}
+
+.nav-hover {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 6px 0;
+  background: var(--weiss);
+  transition: 0.4s ease;
+}
+
+.burger.offen span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.offen span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.offen span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.banner {
+  min-height: 60vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("img/banner.jpg") center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  color: var(--weiss);
+  padding: 60px 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--hellblau);
+  color: var(--dunkelblau);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.5s ease;
+}
+
+.button-dunkel {
+  background: var(--dunkelblau);
+  color: var(--weiss);
+}
+
+.button-dunkel h3 {
+  color: var(--weiss);
+}
+
+#angebote {
+  display: flex;
+  gap: 60px;
+  padding: 50px 50px 50px 60px;
+  background: var(--dunkelblau);
+}
+
+.produkt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--hellblau);
+  color: var(--dunkelblau);
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.pfeil {
+  transition: transform 0.4s ease;
+}
+
+.logo:hover,
+.nav-hover:hover,
+.produkt:hover,
+.pfeil:hover,
+.button:hover {
+  transform: scale(1.05);
+}
+
+.produktbild {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.produkt:hover .produktbild {
+  filter: grayscale(0%);
+}
+
+.preis {
+  font-weight: 700;
+  margin: 10px 0 20px;
+}
+
+.produkt .button {
+  margin-top: auto;
+}
+
+.pfeil {
+  align-self: center;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--hellblau);
+  color: var(--dunkelblau);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 50px;
+}
+
+.text-box {
+  flex: 1;
+}
+
+.text-box h2 {
+  margin-top: 0;
+}
+
+#video video {
+  width: 40%;
+}
+
+.flyer-seiten {
+  display: flex;
+  gap: 20px;
+  width: 45%;
+}
+
+.flyer-link {
+  flex: 1;
+  cursor: zoom-in;
+}
+
+.flyer-bild {
+  display: block;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.flyer-bild:hover {
+  filter: brightness(90%);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-height: 80vh;
+  max-width: 90vw;
+}
+
+.schliessen {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: var(--weiss);
+  font-size: 40pt;
+  text-decoration: none;
+}
+
+#kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--hellblau);
+  color: var(--dunkelblau);
+}
+
+#kontakt h2 {
+  margin: 0;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--schwarz);
+  color: var(--weiss);
+  font-size: 10pt;
+}
+
+footer a {
+  color: var(--weiss);
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  header,
+  header.sticky {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #angebote {
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .content {
+    gap: 40px;
+    padding: 50px 40px;
+  }
+
+  #video video {
+    width: 50%;
+  }
+
+  .flyer-seiten {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  h1 {
+    font-size: 28pt;
+  }
+
+  h2 {
+    font-size: 22pt;
+  }
+
+  header,
+  header.sticky {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    margin-right: auto;
+    padding: 10px 18px;
+  }
+
+  header.sticky .logo {
+    padding: 5px 10px;
+  }
+
+  .logo img {
+    height: 90px;
+  }
+
+  header.sticky .logo img {
+    height: 40px;
+  }
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--schwarz);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  header nav.offen {
+    max-height: 300px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 20px;
+  }
+
+  header nav li a {
+    display: block;
+    margin: 0;
+    padding: 12px;
+  }
+
+  .banner {
+    min-height: 50vh;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  #angebote {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .produktbild {
+    height: 200px;
+    filter: grayscale(0%);
+  }
+
+  .pfeil {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  #video video {
+    width: 100%;
+    height: auto;
+  }
+
+  #video .text-box {
+    order: -1;
+  }
+
+  .flyer-seiten {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flyer-link {
+    width: 100%;
+  }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+
+  .schliessen {
+    top: 10px;
+    right: 20px;
+    font-size: 32pt;
+  }
+
+  #kontakt {
+    padding: 40px 20px;
+  }
+
+  footer,
+  footer a {
+    font-size: 9pt;
+  }
+}
